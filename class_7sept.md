@@ -138,11 +138,11 @@ This is a string containing the name of the method to be invoked on the server.
 - **How it works**: Unlike REST APIs which are resource-oriented (using GET, POST on a URL), RPC is action-oriented. You directly specify the name of the function you wish to execute.
 - **Example**: If you have a Python function `def add(a, b):` on your server, the method name in the request would be `"add"`.
 
-```json
+
 {
   "jsonrpc": "2.0",
   "method": "subtract"
-}```
+}
 
 #### **3. `params` (Optional)**
 
@@ -153,7 +153,6 @@ This member is a structured value that holds the parameter values to be used dur
     - **By-name (Object)**: ` "params": {"subtrahend": 23, "minuend": 42}`
 - **Function Mapping**: The number and type of parameters must match what the server-side function expects.
 
-```json
 {
   "jsonrpc": "2.0",
   "method": "subtract",
